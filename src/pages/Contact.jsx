@@ -1,49 +1,73 @@
-import React, { useState } from "react";
+import React from "react";
+import "../styles/contact.css";
 
-const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Thanks ${form.name}, we received your message!`);
-    setForm({ name: "", email: "", message: "" });
-  };
-
+export default function Contact() {
   return (
-    <div className="page contact">
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={form.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={form.email}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          value={form.message}
-          onChange={handleChange}
-          required
-        ></textarea>
-        <button type="submit" className="btn-primary">Send Message</button>
-      </form>
+    <div className="contact-page">
+      {/* Hero Section */}
+      <header className="contact-hero d-flex align-items-center justify-content-center text-center text-light">
+        <div className="overlay"></div>
+        <div className="container position-relative">
+          <h1 className="display-4 fw-bold">Contact Us</h1>
+          <p className="lead">We’d love to hear from you</p>
+        </div>
+      </header>
+
+      {/* Contact Info + Form + Map */}
+      <section className="container py-5">
+        <div className="row g-5">
+          {/* Contact Info */}
+          <div className="col-md-5" data-aos="fade-right">
+            <h3 className="fw-bold mb-4">Get in Touch</h3>
+            <p className="mb-3">
+              <i className="bi bi-telephone-fill text-primary me-2"></i>
+              <strong>Phone:</strong> +251 911 603 851
+            </p>
+            <p className="mb-3">
+              <i className="bi bi-telephone-fill text-primary me-2"></i>
+              <strong>Phone:</strong> +251 942 378 614
+            </p>
+            <p className="mb-3">
+              <i className="bi bi-envelope-fill text-danger me-2"></i>
+              <strong>Email:</strong> info@germangarage.com
+            </p>
+            <p className="mb-3">
+              <i className="bi bi-geo-alt-fill text-success me-2"></i>
+              <strong>Address:</strong> Sheger city, Ethiopia
+            </p>
+          </div>
+
+          {/* Contact Form + Map */}
+          <div className="col-md-7" data-aos="fade-left">
+            <h3 className="fw-bold mb-4">Send Us a Message</h3>
+          
+
+            {/* Google Map Embed */}
+            <div className="map-container shadow rounded overflow-hidden">
+              <iframe
+                title="German Garage Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d984.9791675663245!2d38.89922636411064!3d9.071356134553634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b91e058d7d539%3A0x999411684617af3f!2zSG9tZSBUYWZvIDE0MCBTZWZlciB8IOGMo-GNjiAxNDAg4Yiw4Y2I4Yit!5e0!3m2!1sen!2set!4v1758969692081!5m2!1sen!2set" 
+                width="100%"
+                height="300"
+                style={{ border: "0" }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div className="text-center mt-3">
+                <a
+                  href="https://maps.app.goo.gl/9sy3idDBLkCtmEd9A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline-primary"
+                >
+                  View on Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
-};
-
-export default Contact;
+}

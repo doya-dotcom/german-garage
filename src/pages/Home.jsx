@@ -1,95 +1,115 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/home.css";
+import logo from "../assets/testwe.jpg"; // ✅ Import logo properly so Vite bundles it
+import hhh from "../assets/homebk.jpg";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      {/* Hero Section with Background */}
-      <header
-        className="relative bg-cover bg-center h-screen text-white"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1600&q=80')",
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
-
-        {/* Navbar */}
-        <nav className="relative z-10 flex justify-between items-center px-10 py-6">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img
-              src="https://img.icons8.com/ios-filled/50/ffffff/garage.png"
-              alt="Garage Logo"
-              className="h-10 w-10"
-            />
-            <h1 className="text-2xl font-bold tracking-wide">German Garage</h1>
+    <main>
+      {/* Hero with Slideshow */}
+      <header className="hero-section position-relative">
+        <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img
+                src={hhh}
+                className="d-block w-100 hero-img"
+                alt="Garage 1"
+              />
+            </div>
+            <div className="carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d"
+                className="d-block w-100 hero-img"
+                alt="Garage 2"
+              />
+            </div>
+            <div className="carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1515923152115-758a5d02b29f"
+                className="d-block w-100 hero-img"
+                alt="Garage 3"
+              />
+            </div>
           </div>
+        </div>
 
-          {/* Nav Links */}
-          <ul className="flex space-x-8 text-lg font-medium">
-            <li>
-              <a href="#home" className="hover:text-yellow-400 transition">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#about" className="hover:text-yellow-400 transition">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#contact" className="hover:text-yellow-400 transition">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Hero Text */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-4">
-            Welcome to German Garage 🚗
-          </h2>
-          <p className="text-lg md:text-2xl max-w-2xl">
-            Premium car repair and maintenance services – trusted by thousands.
+        <div className="hero-overlay"></div>
+        <div className="container text-center hero-content" data-aos="fade-up">
+ 
+          <h1 className="display-3 fw-bold text-light">German Garage</h1>
+          <p className="lead mb-4 text-light">
+            Precision repairs, honest pricing — expert care for your vehicle.
           </p>
-          <a
-            href="#contact"
-            className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-full transition"
-          >
-            Book an Appointment
-          </a>
+          <div className="d-flex justify-content-center gap-3">
+            <Link to="/contact" className="btn btn-primary btn-lg shadow">
+              Book Service
+            </Link>
+            <Link to="/about" className="btn btn-outline-light btn-lg shadow">
+              Learn More
+            </Link>
+          </div>
         </div>
       </header>
 
-      {/* About Section */}
-      <section id="about" className="flex-1 bg-gray-100 py-20 px-6 md:px-20">
-        <h3 className="text-3xl font-bold text-center mb-8">About Us</h3>
-        <p className="text-center max-w-3xl mx-auto text-lg text-gray-700">
-          At German Garage, we provide expert diagnostics, repairs, and
-          maintenance for all car models with a focus on German engineering.
-          Whether you need a simple oil change or a full engine rebuild, our
-          certified mechanics have you covered.
-        </p>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="bg-white py-20 px-6 md:px-20">
-        <h3 className="text-3xl font-bold text-center mb-8">Contact Us</h3>
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-lg mb-4">📍 Addis Ababa, Ethiopia</p>
-          <p className="text-lg mb-4">📞 +251 911 234 567</p>
-          <p className="text-lg mb-4">✉️ info@germangarage.com</p>
+      {/* Services */}
+      <section className="py-4 bg-dark text-light">
+        <div className="container">
+          <h2 className="text-center mb-5" data-aos="fade-down">
+            Our Services
+          </h2>
+          <div className="row g-4">
+            <div className="col-md-4" data-aos="zoom-in">
+              <div className="service-card p-4 h-100 shadow-lg">
+                <h5>Diagnostics & Repair</h5>
+                <p>Modern diagnostics equipment — fast, accurate repair.</p>
+              </div>
+            </div>
+            <div className="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+              <div className="service-card p-4 h-100 shadow-lg">
+                <h5>Scheduled Maintenance</h5>
+                <p>Oil change, brakes, tires, belts — keep your car healthy.</p>
+              </div>
+            </div>
+            <div className="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+              <div className="service-card p-4 h-100 shadow-lg">
+                <h5>Performance & Tuning</h5>
+                <p>Engine and suspension tuning for performance and longevity.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black text-gray-300 py-6 text-center">
-        <p>
-          &copy; {new Date().getFullYear()} German Garage. All Rights Reserved.
-        </p>
-      </footer>
-    </div>
+      {/* Why Choose Us */}
+      <section className="py-5 bg-light">
+        <div className="container">
+          <h2 className="text-center mb-5" data-aos="fade-up">
+            Why Choose German Garage
+          </h2>
+          <div className="row g-4 text-dark">
+            <div className="col-md-4" data-aos="flip-left">
+              <div className="p-4 text-center shadow rounded bg-white h-100">
+                <h5>Experienced Technicians</h5>
+                <p>Trained mechanics specializing differnt vehicles.</p>
+              </div>
+            </div>
+            <div className="col-md-4" data-aos="flip-up" data-aos-delay="200">
+              <div className="p-4 text-center shadow rounded bg-white h-100">
+                <h5>Quality Parts</h5>
+                <p>OEM-quality parts and transparent repair quotes.</p>
+              </div>
+            </div>
+            <div className="col-md-4" data-aos="flip-right" data-aos-delay="400">
+              <div className="p-4 text-center shadow rounded bg-white h-100">
+                <h5>Customer Support</h5>
+                <p>Friendly service and reliable follow-up.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

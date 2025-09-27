@@ -1,21 +1,32 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import "./Navbar.css";
+import { Link } from "react-router-dom";
+import logo from "../assets/testwe.jpg"; // ✅ your logo image
 
-const Navbar = () => {
+export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="nav-logo">
-        <Link to="/">🚗 Car Garage</Link>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-3 shadow">
+      <div className="container">
+        {/* Logo */}
+        <Link to="/" className="navbar-brand d-flex align-items-center">
+          <img src={logo} alt="German Garage Logo" className="nav-logo me-2" />
+          <span className="fw-bold text-light">German Garage</span>
+        </Link>
+
+        {/* Navigation Links */}
+        <div>
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </div>
       </div>
-      <ul className="nav-links">
-        <li><NavLink to="/" end>Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/services">Services</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
-      </ul>
     </nav>
   );
-};
-
-export default Navbar;
+}

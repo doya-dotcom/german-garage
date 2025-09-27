@@ -1,0 +1,11 @@
+/* small reset & base */
+:root { --accent: #ffcc00; }
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #fff;
+  color: #222;
+}
+a { text-decoration: none; }
