@@ -1,0 +1,38 @@
+/* Hero Section */
+.services-hero {
+  height: 60vh;
+  background: url("../assets/garage-bg.jpg") center/cover no-repeat;
+  position: relative;
+}
+.services-hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Service Cards */
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.service-icon {
+  font-size: 3rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: url("../assets/workshop.jpg") center/cover no-repeat;
+  position: relative;
+}
+.cta-section .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
