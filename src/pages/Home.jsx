@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/home.css";
-import logo from "../assets/testwe.jpg"; // ✅ Import logo properly so Vite bundles it
-import hhh from "../assets/homebk.jpg";
+import hhh from "../assets/homebk.jpg"; // hero background
 
 export default function Home() {
   return (
@@ -12,11 +11,7 @@ export default function Home() {
         <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img
-                src={hhh}
-                className="d-block w-100 hero-img"
-                alt="Garage 1"
-              />
+              <img src={hhh} className="d-block w-100 hero-img" alt="Garage 1" />
             </div>
             <div className="carousel-item">
               <img
@@ -37,7 +32,6 @@ export default function Home() {
 
         <div className="hero-overlay"></div>
         <div className="container text-center hero-content" data-aos="fade-up">
- 
           <h1 className="display-3 fw-bold text-light">German Garage</h1>
           <p className="lead mb-4 text-light">
             Precision repairs, honest pricing — expert care for your vehicle.
@@ -54,27 +48,27 @@ export default function Home() {
       </header>
 
       {/* Services */}
-      <section className="py-4 bg-dark text-light">
+      <section className="py-5 bg-dark text-light">
         <div className="container">
           <h2 className="text-center mb-5" data-aos="fade-down">
             Our Services
           </h2>
           <div className="row g-4">
             <div className="col-md-4" data-aos="zoom-in">
-              <div className="service-card p-4 h-100 shadow-lg">
-                <h5>Diagnostics & Repair</h5>
+              <div className="service-card p-4 h-100 shadow-lg text-dark">
+                <h5 className="fw-bold">Diagnostics & Repair</h5>
                 <p>Modern diagnostics equipment — fast, accurate repair.</p>
               </div>
             </div>
             <div className="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-              <div className="service-card p-4 h-100 shadow-lg">
-                <h5>Scheduled Maintenance</h5>
+              <div className="service-card p-4 h-100 shadow-lg text-dark">
+                <h5 className="fw-bold">Scheduled Maintenance</h5>
                 <p>Oil change, brakes, tires, belts — keep your car healthy.</p>
               </div>
             </div>
             <div className="col-md-4" data-aos="zoom-in" data-aos-delay="400">
-              <div className="service-card p-4 h-100 shadow-lg">
-                <h5>Performance & Tuning</h5>
+              <div className="service-card p-4 h-100 shadow-lg text-dark">
+                <h5 className="fw-bold">Performance & Tuning</h5>
                 <p>Engine and suspension tuning for performance and longevity.</p>
               </div>
             </div>
@@ -92,7 +86,7 @@ export default function Home() {
             <div className="col-md-4" data-aos="flip-left">
               <div className="p-4 text-center shadow rounded bg-white h-100">
                 <h5>Experienced Technicians</h5>
-                <p>Trained mechanics specializing differnt vehicles.</p>
+                <p>Trained mechanics specializing in different vehicles.</p>
               </div>
             </div>
             <div className="col-md-4" data-aos="flip-up" data-aos-delay="200">

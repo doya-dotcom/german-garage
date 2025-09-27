@@ -32,6 +32,7 @@
   border-radius: 50%; /* Circular */
   object-fit: cover;
 }
+
 /* Footer Styling */
 .footer {
   background: linear-gradient(180deg, #111, #222);

@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="container">
         {/* Logo */}
         <Link to="/" className="navbar-brand d-flex align-items-center">
-          <img src={logo} alt="German Garage Logo" className="nav-logo me-2" />
+          <img src={logo} alt="German Garage Logo" className="nav-logo me-1" />
           <span className="fw-bold text-light">German Garage</span>
         </Link>
 
