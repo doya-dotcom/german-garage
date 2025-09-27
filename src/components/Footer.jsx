@@ -35,7 +35,7 @@ export default function Footer() {
             <h6 className="fw-bold mb-3">Contact Us</h6>
             <p className="small mb-1"><i className="bi bi-telephone-fill me-2"></i> +251 911 603 851</p>
             <p className="small mb-1"><i className="bi bi-telephone-fill me-2"></i> +251 942 378 614</p>
-            <p className="small mb-1"><i className="bi bi-envelope-fill me-2"></i> info@germangarage.com</p>
+            <p className="small mb-1"><i className="bi bi-envelope-fill me-2"></i> aberabisrat232@gmail.com</p>
             <p className="small"><i className="bi bi-geo-alt-fill me-2"></i> Sheger, Ethiopia</p>
 
             {/* Social Media */}
