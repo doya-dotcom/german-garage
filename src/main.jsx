@@ -9,11 +9,10 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 AOS.init();
 
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    {/* 👇 Add basename so routes work when hosted at /german-garage */}
-    <BrowserRouter basename="/german-garage">
+    {/* 👇 No basename, app will load from root */}
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
