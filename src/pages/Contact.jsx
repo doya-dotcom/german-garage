@@ -29,7 +29,7 @@ export default function Contact() {
             </p>
             <p className="mb-3">
               <i className="bi bi-envelope-fill text-danger me-2"></i>
-              <strong>Email:</strong> info@germangarage.com
+              <strong>Email:</strong> aberabisrat232@gmail.com
             </p>
             <p className="mb-3">
               <i className="bi bi-geo-alt-fill text-success me-2"></i>
@@ -46,7 +46,7 @@ export default function Contact() {
             <div className="map-container shadow rounded overflow-hidden">
               <iframe
                 title="German Garage Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d984.9791675663245!2d38.89922636411064!3d9.071356134553634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b91e058d7d539%3A0x999411684617af3f!2zSG9tZSBUYWZvIDE0MCBTZWZlciB8IOGMo-GNjiAxNDAg4Yiw4Y2I4Yit!5e0!3m2!1sen!2set!4v1758969692081!5m2!1sen!2set" 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d210.6542446364572!2d38.898667124121!3d9.07217324585002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2set!4v1759047386062!5m2!1sen!2set"
                 width="100%"
                 height="300"
                 style={{ border: "0" }}
