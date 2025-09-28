@@ -35,6 +35,10 @@ export default function Contact() {
               <i className="bi bi-geo-alt-fill text-success me-2"></i>
               <strong>Address:</strong> Sheger city, Ethiopia
             </p>
+               <p className="mb-3">
+              <i className="bi bi-geo-alt-fill text-success me-2"></i>
+              <strong>Address on map:</strong> 9°04'19.9"N 38°53'55.1"E
+            </p>
           </div>
 
           {/* Contact Form + Map */}
