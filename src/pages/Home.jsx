@@ -29,7 +29,7 @@ export default function Home() {
                 type="button"
                 data-bs-target="#heroCarousel"
                 data-bs-slide-to={i}
-                className={i === 0 ? "active" : ""}
+                className={i === 0 ? "true" : ""}
                 aria-current={i === 0 ? "true" : undefined}
                 aria-label={`Slide ${i + 1}`}
               ></button>
