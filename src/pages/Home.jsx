@@ -1,35 +1,85 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/home.css";
-import hhh from "../assets/homebk.jpg"; // hero background
+
+// ✅ Import local images from assets folder
+import slide1 from "../assets/slide1.jpg";
+import slide2 from "../assets/slide2.jpg";
+import slide3 from "../assets/slide3.jpg";
+import slide4 from "../assets/slide4.jpg";
+import slide5 from "../assets/slide5.jpg";
+import slide6 from "../assets/slide6.jpg";
 
 export default function Home() {
   return (
     <main>
       {/* Hero with Slideshow */}
       <header className="hero-section position-relative">
-        <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
+        <div
+          id="heroCarousel"
+          className="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="4000" // ✅ Auto-slide every 4s
+        >
+          {/* Indicators (dots) */}
+          <div className="carousel-indicators">
+            {[...Array(6)].map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                data-bs-target="#heroCarousel"
+                data-bs-slide-to={i}
+                className={i === 0 ? "active" : ""}
+                aria-current={i === 0 ? "true" : undefined}
+                aria-label={`Slide ${i + 1}`}
+              ></button>
+            ))}
+          </div>
+
+          {/* Slides */}
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src={hhh} className="d-block w-100 hero-img" alt="Garage 1" />
+              <img src={slide1} className="d-block w-100 hero-img" alt="Garage 1" />
             </div>
             <div className="carousel-item">
-              <img
-                src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d"
-                className="d-block w-100 hero-img"
-                alt="Garage 2"
-              />
+              <img src={slide2} className="d-block w-100 hero-img" alt="Garage 2" />
             </div>
             <div className="carousel-item">
-              <img
-                src="https://images.unsplash.com/photo-1515923152115-758a5d02b29f"
-                className="d-block w-100 hero-img"
-                alt="Garage 3"
-              />
+              <img src={slide3} className="d-block w-100 hero-img" alt="Garage 3" />
+            </div>
+            <div className="carousel-item">
+              <img src={slide4} className="d-block w-100 hero-img" alt="Garage 4" />
+            </div>
+            <div className="carousel-item">
+              <img src={slide5} className="d-block w-100 hero-img" alt="Garage 5" />
+            </div>
+            <div className="carousel-item">
+              <img src={slide6} className="d-block w-100 hero-img" alt="Garage 6" />
             </div>
           </div>
+
+          {/* Controls (Prev/Next buttons) */}
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
 
+        {/* Overlay and Content */}
         <div className="hero-overlay"></div>
         <div className="container text-center hero-content" data-aos="fade-up">
           <h1 className="display-3 fw-bold text-light">German Garage</h1>
