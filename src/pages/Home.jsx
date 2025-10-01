@@ -19,7 +19,7 @@ export default function Home() {
           id="heroCarousel"
           className="carousel slide"
           data-bs-ride="carousel"
-          data-bs-interval="4000" // ✅ Auto-slide every 4s
+          data-bs-interval="1000" // ✅ Auto-slide every 4s
         >
           {/* Indicators (dots) */}
           <div className="carousel-indicators">
